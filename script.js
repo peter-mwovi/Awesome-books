@@ -27,7 +27,7 @@ UI.prototype.showAlert = function (message, className) {
   const form = document.getElementById('bookForm');
   container.insertBefore(div, form);
 
-  setTimeout(function () {
+  setTimeout(() => {
     document.querySelector('.alert').remove();
   }, 400);
 };
@@ -63,7 +63,7 @@ UI.prototype.displayBooksFromLocalStorage = function () {
 };
 
 // Event listeners
-document.getElementById('bookForm').addEventListener('submit', function (e) {
+document.getElementById('bookForm').addEventListener('submit', (e) => {
   const title = document.getElementById('titleInput').value;
   const author = document.getElementById('authorInput').value;
   const book = new Book(title, author);
@@ -81,14 +81,14 @@ document.getElementById('bookForm').addEventListener('submit', function (e) {
   e.preventDefault();
 });
 
-document.getElementById('bookList').addEventListener('click', function (e) {
+document.getElementById('bookList').addEventListener('click', (e) => {
   const ui = new UI();
   ui.deleteBookFromList(e.target);
   ui.showAlert('Book removed', 'success');
 });
 
 // Load books from local storage on page load
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const ui = new UI();
   ui.displayBooksFromLocalStorage();
 });

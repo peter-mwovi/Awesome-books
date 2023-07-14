@@ -76,28 +76,4 @@ class UI {
   }
 }
 
-// Event listeners
-document.getElementById("bookForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const title = document.getElementById("titleInput").value;
-  const author = document.getElementById("authorInput").value;
-  const book = new Book(title, author);
 
-  if (title === "" || author === "") {
-    UI.showAlert("Please fill in all fields", "error");
-  } else {
-    UI.addBookToList(book);
-    UI.clearInputFields();
-    UI.saveToLocalStorage(book);
-    UI.showAlert("Book added", "success");
-  }
-});
-
-document.getElementById("bookList").addEventListener("click", function (e) {
-  UI.deleteBookFromList(e.target);
-});
-
-// Load books from local storage on page load
-document.addEventListener("DOMContentLoaded", function () {
-  UI.displayBooksFromLocalStorage();
-});

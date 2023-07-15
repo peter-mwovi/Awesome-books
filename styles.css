@@ -65,13 +65,14 @@ hr {
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .nav-list {
   display: flex;
 }
 
-.nav-list li a {
+.nav-list a {
   text-decoration: none;
   color: black;
   padding: 0 15px;
@@ -80,6 +81,10 @@ hr {
   font-size: 20px;
 }
 
-.nav-list li a:active {
+.nav-list a:active {
   color: blue;
+}
+
+.hidden {
+  display: none;
 }

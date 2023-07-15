@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome books</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
+    <header class="header-container">
+      <h1 class="logo-text">Awsome Books</h1>
+      <nav class="nav-container">
+        <div class="nav-list">
+          <a href="#" class="nav-link" onclick="showContent('book-container')"
+            >List</a
+          >
+          <a href="#" class="nav-link" onclick="showContent('bookForm')"
+            >Add book</a
+          >
+          <a href="#" class="nav-link" onclick="showContent('contact')"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
     <h1>All awesome books</h1>
-    <div class="booklist">
-
-        <span id="bookList"></span>
+    <div class="booklist" id="book-container">
+      <span id="bookList"></span>
     </div>
-    <hr/>
+    <hr />
 
-    <form id="bookForm">
-        <h1>Add a new book</h1>
+    <form id="bookForm" class="hidden">
+      <h1>Add a new book</h1>
 
-        <input type="text" id="titleInput" placeholder="Title" /> <br />
-        <br />
-        <input type="text" id="authorInput" placeholder="Author" /> <br />
-        <br />
-        <button type="submit" class="add">Add</button>
+      <input type="text" id="titleInput" placeholder="Title" /> <br />
+      <br />
+      <input type="text" id="authorInput" placeholder="Author" /> <br />
+      <br />
+      <button type="submit" class="add">Add</button>
     </form>
 
-    <script src="./script.js"></script>
-</body>
+    <div id="contact" class="contact-container hidden">
+      <h2>Contact Information</h2>
+      <p class="contact-text">
+        Do you have any question or just want to say hello? <br />
+        You can reah out to us at!
+      </p>
+      <ul class="contact-options">
+        <li>
+          Our email
+          <a href="mailto:arslanmajeed214@gmail.com"
+            >arslanmajeed214@gmail.com</a
+          >
+        </li>
+        <li>Phone: +9230192131</li>
+        <li>Address: Street no 4 Green town Lahore.</li>
+      </ul>
+    </div>
 
+    <script src="./script.js"></script>
+  </body>
 </html>

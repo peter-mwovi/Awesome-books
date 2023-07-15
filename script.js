@@ -95,3 +95,25 @@ document.getElementById('bookList').addEventListener('click', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
   UI.displayBooksFromLocalStorage();
 });
+
+const bookListI = document.getElementById('book-container');
+const contactI = document.getElementById('contact');
+const bookFormI = document.getElementById('bookForm');
+
+function showContent(itemId) {
+  if (itemId === 'book-container') {
+    bookListI.classList.remove('hidden');
+    contactI.classList.add('hidden');
+    bookFormI.classList.add('hidden');
+  } else if (itemId === 'contact') {
+    bookListI.classList.add('hidden');
+    contactI.classList.remove('hidden');
+    bookFormI.classList.add('hidden');
+  } else if (itemId === 'bookForm') {
+    bookListI.classList.add('hidden');
+    contactI.classList.add('hidden');
+    bookFormI.classList.remove('hidden');
+  }
+}
+
+showContent('book');

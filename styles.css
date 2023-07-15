@@ -79,9 +79,10 @@ hr {
   background-color: white;
   border-right: 2px solid green;
   font-size: 20px;
+  font-weight: bold;
 }
 
-.nav-list a:active {
+.nav-list a:hover {
   color: blue;
 }
 

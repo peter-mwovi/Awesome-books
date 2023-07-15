@@ -1,4 +1,63 @@
 body {
-  width: 80vw;
+  width: 40%;
   margin: auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.booklist {
+  border: 3px solid black;
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+}
+
+.delete {
+  transition: margin-top 0.3s ease, margin-left 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border: solid 1px black;
+  box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 5px;
+  padding: 3px;
+}
+
+li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 50%;
+  border: 3px solid black;
+  font-weight: bold;
+  color: black;
+  padding: 5px;
+}
+
+input::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.add {
+  transition: margin-top 0.3s ease, margin-left 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border: solid 1px black;
+  box-shadow: 1px 1px 0, 2px 2px 0, 3px 3px 0, 4px 4px 0, 5px 5px 0;
+  margin-left: 45%;
+}
+
+hr {
+  width: 20%;
+  height: 2px;
+  background-color: #000;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
